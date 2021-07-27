@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="647.0" prefWidth="920.0" style="-fx-background-color: #343a40;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <Button fx:id="runDetection" layoutX="42.0" layoutY="194.0" mnemonicParsing="false" onAction="#runDetection" prefHeight="26.0" prefWidth="132.0" style="-fx-background-color: #29a329; -fx-background-radius: 45; -fx-border-radius: 45; -fx-border-color: #231e23;" text="Run Detection" textFill="WHITE" />
+      <Button fx:id="viewInput" layoutX="42.0" layoutY="229.0" mnemonicParsing="false" onAction="#viewInput" prefHeight="26.0" prefWidth="132.0" style="-fx-background-radius: 45; -fx-background-color: #e1e8eb; -fx-border-color: #231e23; -fx-border-radius: 45;" text="View Input Image" />
+      <Button fx:id="viewOutput" layoutX="42.0" layoutY="263.0" mnemonicParsing="false" onAction="#viewOutput" prefHeight="26.0" prefWidth="132.0" style="-fx-background-radius: 45; -fx-background-color: #e1e8eb; -fx-border-color: #231e23; -fx-border-radius: 45;" text="View Output Image" />
+      <TextField fx:id="textWeight" editable="false" layoutX="42.0" layoutY="62.0" prefHeight="26.0" prefWidth="132.0" style="-fx-background-radius: 45; -fx-border-radius: 45; -fx-border-color: #7952b3;" />
+      <Button fx:id="browseImage" layoutX="42.0" layoutY="105.0" mnemonicParsing="false" onAction="#browseImageFile" prefHeight="26.0" prefWidth="132.0" style="-fx-background-radius: 45; -fx-background-color: #e1e8eb; -fx-border-color: #231e23; -fx-border-radius: 45;" text="Browse Images File" />
+      <TextField fx:id="textImage" editable="false" layoutX="42.0" layoutY="140.0" prefHeight="26.0" prefWidth="132.0" style="-fx-background-radius: 45; -fx-border-color: #7952b3; -fx-border-radius: 45;" />
+      <TextArea fx:id="output" editable="false" layoutX="14.0" layoutY="394.0" prefHeight="168.0" prefWidth="187.0" style="-fx-background-color: #f0ebcc; -fx-border-color: #7952b3;" />
+      <Button fx:id="restart" layoutX="42.0" layoutY="573.0" mnemonicParsing="false" onAction="#restart" prefHeight="26.0" prefWidth="132.0" style="-fx-background-color: ffc107; -fx-background-radius: 45; -fx-border-radius: 45; -fx-border-color: #231e23;" text="Restart" />
+      <Button fx:id="exit" layoutX="42.0" layoutY="606.0" mnemonicParsing="false" onAction="#exit" prefHeight="26.0" prefWidth="132.0" style="-fx-background-color: #ff1a1a; -fx-background-radius: 45; -fx-border-radius: 45; -fx-border-color: #231e23;" text="Exit" textFill="WHITE" />
+      <Button fx:id="browseWeight" layoutX="42.0" layoutY="28.0" mnemonicParsing="false" onAction="#browseWeightFile" prefHeight="26.0" prefWidth="132.0" style="-fx-background-radius: 45; -fx-background-color: #e1e8eb; -fx-border-radius: 45; -fx-border-color: #231e23;" text="Browse Weights File" />
+      <ScrollPane layoutX="217.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="647.0" prefWidth="702.0" style="-fx-background-color: #343a40;">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="650.0" prefWidth="701.0" style="-fx-background-color: #343a40;">
+               <children>
+                  <ImageView fx:id="imageView" fitHeight="634.0" fitWidth="735.0" pickOnBounds="true" preserveRatio="true" />
+               </children></AnchorPane>
+        </content>
+      </ScrollPane>
+      <Label layoutX="14.0" layoutY="307.0" prefHeight="26.0" prefWidth="46.0" text="Total =" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="total" editable="false" layoutX="60.0" layoutY="307.0" prefHeight="26.0" prefWidth="138.0" style="-fx-background-radius: 45; -fx-border-radius: 45; -fx-border-color: #7952b3;" />
+      <Label layoutX="14.0" layoutY="339.0" prefHeight="26.0" prefWidth="70.0" text="Image Size:" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="size" editable="false" layoutX="84.0" layoutY="339.0" prefHeight="26.0" prefWidth="116.0" style="-fx-background-radius: 45; -fx-border-radius: 45; -fx-border-color: #7952b3;" />
+   </children>
+</AnchorPane>
